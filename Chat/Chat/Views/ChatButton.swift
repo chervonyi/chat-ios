@@ -43,7 +43,6 @@ class ChatButton: UIButton {
     
     func setupButton() {
         self.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
-        self.setTitle(titleLabel?.text!.uppercased(), for: UIControlState.normal)
         self.layer.cornerRadius = 17
         self.layer.masksToBounds = true
         self.titleLabel?.font = .systemFont(ofSize: 14)

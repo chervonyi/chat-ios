@@ -13,12 +13,14 @@ class ChatViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
     }
 
     @IBAction func onClickChangeName(_ sender: UIButton) {
         performSegue(withIdentifier: "toChangeName", sender: nil)
     }
     
+    @IBAction func onClickSearch(_ sender: UIButton) {
+        performSegue(withIdentifier: "toSearching", sender: nil)
+    }
     
 }

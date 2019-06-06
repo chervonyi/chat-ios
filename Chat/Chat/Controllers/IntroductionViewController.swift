@@ -24,8 +24,6 @@ class InputNameViewController: UIViewController {
         let bottomLine = CALayer()
         bottomLine.frame = CGRect(x: 0, y: textFieldName.frame.height - 5, width: textFieldName.frame.width, height: 2)
         
-        
-
         bottomLine.backgroundColor = #colorLiteral(red: 0, green: 0.4784313725, blue: 1, alpha: 1)
         textFieldName.borderStyle = UITextBorderStyle.none
         textFieldName.layer.addSublayer(bottomLine)

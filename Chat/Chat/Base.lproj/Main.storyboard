@@ -58,7 +58,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="317.60000000000002" y="133.00492610837438"/>
+            <point key="canvasLocation" x="1270" y="132"/>
         </scene>
         <!--Chat View Controller-->
         <scene sceneID="yk4-dw-c0A">
@@ -83,6 +83,14 @@
                                     <action selector="onClickChangeName:" destination="hW8-hO-Z8s" eventType="touchUpInside" id="qyv-Uc-vea"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hrN-fl-fxb">
+                                <rect key="frame" x="109" y="609" width="105" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Start searching"/>
+                                <connections>
+                                    <action selector="onClickSearch:" destination="hW8-hO-Z8s" eventType="touchUpInside" id="BOs-Ct-QZH"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="QbC-rW-NIC"/>
@@ -92,11 +100,297 @@
                     </navigationItem>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="toChangeName" id="7kU-SA-as1"/>
+                        <segue destination="lAZ-ec-eqI" kind="show" identifier="toSearching" id="JM3-N2-cvO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ht4-Pc-3Pm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="860" y="958.37438423645324"/>
+            <point key="canvasLocation" x="478" y="910"/>
+        </scene>
+        <!--Searching for a new chat-->
+        <scene sceneID="sTy-rj-kKJ">
+            <objects>
+                <viewController id="lAZ-ec-eqI" customClass="SelectDesirableGenderViewController" customModule="Chat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HwH-U9-elg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rSX-0F-TyG" customClass="ChatButton" customModule="Chat" customModuleProvider="target">
+                                <rect key="frame" x="168" y="718" width="39" height="30"/>
+                                <state key="normal" title="NEXT">
+                                    <color key="titleColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isChecked" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onClickNext:" destination="lAZ-ec-eqI" eventType="touchUpInside" id="GFR-IC-pZO"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="cG3-Sh-1ib">
+                                <rect key="frame" x="137.66666666666666" y="381" width="100" height="130"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="925-dY-sf5" customClass="ChatButton" customModule="Chat" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="30"/>
+                                        <state key="normal" title="a man">
+                                            <color key="titleColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onChangeType:" destination="lAZ-ec-eqI" eventType="touchUpInside" id="SLf-Vw-R02"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ryv-Un-gLr" customClass="ChatButton" customModule="Chat" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="100" height="30"/>
+                                        <state key="normal" title="a woman">
+                                            <color key="titleColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onChangeType:" destination="lAZ-ec-eqI" eventType="touchUpInside" id="ZFG-bm-mqp"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fyH-IB-cu9" customClass="ChatButton" customModule="Chat" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="100" width="100" height="30"/>
+                                        <state key="normal" title="anybody">
+                                            <color key="titleColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isChecked" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="onChangeType:" destination="lAZ-ec-eqI" eventType="touchUpInside" id="ISO-ni-c8d"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="HCd-6g-KFx"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Who would you like to chat with?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e65-ql-cn8">
+                                <rect key="frame" x="50" y="329.66666666666669" width="275" height="20.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KJA-4K-Hmc" firstAttribute="trailing" secondItem="e65-ql-cn8" secondAttribute="trailing" constant="50" id="7zh-g7-ntl"/>
+                            <constraint firstItem="cG3-Sh-1ib" firstAttribute="centerY" secondItem="HwH-U9-elg" secondAttribute="centerY" constant="40" id="B3T-vh-Waj"/>
+                            <constraint firstItem="e65-ql-cn8" firstAttribute="leading" secondItem="KJA-4K-Hmc" secondAttribute="leading" constant="50" id="Rmh-Bo-fRR"/>
+                            <constraint firstItem="cG3-Sh-1ib" firstAttribute="centerX" secondItem="HwH-U9-elg" secondAttribute="centerX" id="a1a-1W-wN4"/>
+                            <constraint firstItem="rSX-0F-TyG" firstAttribute="centerX" secondItem="HwH-U9-elg" secondAttribute="centerX" id="d2g-o4-BgU"/>
+                            <constraint firstItem="KJA-4K-Hmc" firstAttribute="bottom" secondItem="rSX-0F-TyG" secondAttribute="bottom" constant="30" id="ePa-fl-RKu"/>
+                            <constraint firstItem="cG3-Sh-1ib" firstAttribute="top" secondItem="e65-ql-cn8" secondAttribute="bottom" constant="30" id="jPt-Wx-Aud"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="KJA-4K-Hmc"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Searching for a new chat" id="HhZ-1m-m59">
+                        <barButtonItem key="backBarButtonItem" title=" " id="LWK-O6-N9L"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="buttonAny" destination="fyH-IB-cu9" id="ODJ-KA-R5h"/>
+                        <outlet property="buttonMan" destination="925-dY-sf5" id="ayf-7j-8BO"/>
+                        <outlet property="buttonWoman" destination="Ryv-Un-gLr" id="rEl-A5-Axx"/>
+                        <segue destination="NA0-kl-kzQ" kind="show" identifier="toSelectLanguage" id="7XU-cy-7CN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BBa-v3-eHA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1269.5999999999999" y="1705.4187192118227"/>
+        </scene>
+        <!--Searching for a new chat-->
+        <scene sceneID="edT-mh-Pfm">
+            <objects>
+                <viewController id="NA0-kl-kzQ" customClass="SelectDesirableLanguageViewController" customModule="Chat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lVU-te-uFo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What language should it be?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W45-OL-m2s">
+                                <rect key="frame" x="50" y="330.66666666666669" width="275" height="20.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Er7-hE-WWs">
+                                <rect key="frame" x="62.666666666666657" y="381" width="249.99999999999997" height="150"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Kgn-cS-yyr">
+                                        <rect key="frame" x="71" y="0.0" width="108" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GBK-WI-jvy" customClass="ChatButton" customModule="Chat" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="30"/>
+                                                <state key="normal" title="English">
+                                                    <color key="titleColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isChecked" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="onChangeLanguage:" destination="NA0-kl-kzQ" eventType="touchUpInside" id="2y3-WY-d1u"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IDS-oO-LNc" customClass="ChatButton" customModule="Chat" customModuleProvider="target">
+                                                <rect key="frame" x="60" y="0.0" width="48" height="30"/>
+                                                <state key="normal" title="French">
+                                                    <color key="titleColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onChangeLanguage:" destination="NA0-kl-kzQ" eventType="touchUpInside" id="6y5-tl-dlw"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="y6l-0J-sde">
+                                        <rect key="frame" x="65.666666666666686" y="40" width="119" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="unN-UT-8ML" customClass="ChatButton" customModule="Chat" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="55" height="30"/>
+                                                <state key="normal" title="Spanish">
+                                                    <color key="titleColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onChangeLanguage:" destination="NA0-kl-kzQ" eventType="touchUpInside" id="mtH-qF-ijF"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rgz-0d-QnV" customClass="ChatButton" customModule="Chat" customModuleProvider="target">
+                                                <rect key="frame" x="65" y="0.0" width="54" height="30"/>
+                                                <state key="normal" title="Russian">
+                                                    <color key="titleColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onChangeLanguage:" destination="NA0-kl-kzQ" eventType="touchUpInside" id="hYc-Dw-GIY"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="xSb-Uy-GKa">
+                                        <rect key="frame" x="60" y="80" width="130" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Pc-y6-yJJ" customClass="ChatButton" customModule="Chat" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="55" height="30"/>
+                                                <state key="normal" title="German">
+                                                    <color key="titleColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onChangeLanguage:" destination="NA0-kl-kzQ" eventType="touchUpInside" id="dNF-wd-gmu"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ldu-Y6-hYV" customClass="ChatButton" customModule="Chat" customModuleProvider="target">
+                                                <rect key="frame" x="64.999999999999986" y="0.0" width="65.000000000000014" height="30"/>
+                                                <state key="normal" title="Ukrainian">
+                                                    <color key="titleColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onChangeLanguage:" destination="NA0-kl-kzQ" eventType="touchUpInside" id="lRp-xc-aKW"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z4G-it-umP" customClass="ChatButton" customModule="Chat" customModuleProvider="target">
+                                        <rect key="frame" x="105" y="120" width="40" height="30"/>
+                                        <state key="normal" title="Other">
+                                            <color key="titleColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onChangeLanguage:" destination="NA0-kl-kzQ" eventType="touchUpInside" id="iEE-JP-PXc"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="Qtt-f5-pLT"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="egZ-3b-Gve" customClass="ChatButton" customModule="Chat" customModuleProvider="target">
+                                <rect key="frame" x="173" y="718" width="30" height="30"/>
+                                <state key="normal" title="GO">
+                                    <color key="titleColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isChecked" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onClickNext:" destination="lAZ-ec-eqI" eventType="touchUpInside" id="prY-rH-CDm"/>
+                                    <action selector="onClickStart:" destination="NA0-kl-kzQ" eventType="touchUpInside" id="M9n-uw-XIR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="W45-OL-m2s" firstAttribute="leading" secondItem="OTi-9f-HVT" secondAttribute="leading" constant="50" id="2ev-Wo-Nq5"/>
+                            <constraint firstItem="OTi-9f-HVT" firstAttribute="trailing" secondItem="W45-OL-m2s" secondAttribute="trailing" constant="50" id="LHr-CW-xiW"/>
+                            <constraint firstItem="Er7-hE-WWs" firstAttribute="centerX" secondItem="lVU-te-uFo" secondAttribute="centerX" id="RVb-AK-vmw"/>
+                            <constraint firstItem="Er7-hE-WWs" firstAttribute="centerY" secondItem="lVU-te-uFo" secondAttribute="centerY" constant="50" id="V0R-kd-sMh"/>
+                            <constraint firstItem="egZ-3b-Gve" firstAttribute="centerX" secondItem="lVU-te-uFo" secondAttribute="centerX" id="Y13-Dg-RFU"/>
+                            <constraint firstItem="OTi-9f-HVT" firstAttribute="bottom" secondItem="egZ-3b-Gve" secondAttribute="bottom" constant="30" id="cbD-q9-VHe"/>
+                            <constraint firstItem="Er7-hE-WWs" firstAttribute="top" secondItem="W45-OL-m2s" secondAttribute="bottom" constant="30" id="diw-gE-D78"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="OTi-9f-HVT"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Searching for a new chat" id="OTC-lv-Ffi">
+                        <barButtonItem key="backBarButtonItem" title=" " id="FcN-Iz-axY"/>
+                    </navigationItem>
+                    <connections>
+                        <outletCollection property="languageButtons" destination="GBK-WI-jvy" collectionClass="NSMutableArray" id="SCj-yz-E21"/>
+                        <outletCollection property="languageButtons" destination="IDS-oO-LNc" collectionClass="NSMutableArray" id="yGK-LX-5Z4"/>
+                        <outletCollection property="languageButtons" destination="unN-UT-8ML" collectionClass="NSMutableArray" id="am9-7G-A70"/>
+                        <outletCollection property="languageButtons" destination="Rgz-0d-QnV" collectionClass="NSMutableArray" id="6WU-9b-yvZ"/>
+                        <outletCollection property="languageButtons" destination="4Pc-y6-yJJ" collectionClass="NSMutableArray" id="laO-fR-hXj"/>
+                        <outletCollection property="languageButtons" destination="ldu-Y6-hYV" collectionClass="NSMutableArray" id="fS1-cW-SvV"/>
+                        <outletCollection property="languageButtons" destination="z4G-it-umP" collectionClass="NSMutableArray" id="eiE-pU-E97"/>
+                        <segue destination="Rga-K7-V1N" kind="show" identifier="toStartSearching" id="zJU-zW-YPX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bnv-fB-PUQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2160.8000000000002" y="1704.6798029556651"/>
+        </scene>
+        <!--Searching for a new chat-->
+        <scene sceneID="wSn-3g-DEv">
+            <objects>
+                <viewController id="Rga-K7-V1N" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AOz-db-UdE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We are trying to find someone special for you.." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rwa-Fn-SIA">
+                                <rect key="frame" x="70" y="386" width="235" height="40.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We recommend you to close the app because we do not know how long it will take." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wam-1S-WRK">
+                                <rect key="frame" x="70" y="650" width="235" height="46.666666666666629"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="13"/>
+                                <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We will inform you as soon as we find a new chat." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ahC-iT-ox3">
+                                <rect key="frame" x="70" y="726.66666666666663" width="235" height="31.333333333333371"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="13"/>
+                                <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ahC-iT-ox3" firstAttribute="leading" secondItem="eK4-0c-rKG" secondAttribute="leading" constant="70" id="62c-Oj-tBM"/>
+                            <constraint firstItem="eK4-0c-rKG" firstAttribute="trailing" secondItem="wam-1S-WRK" secondAttribute="trailing" constant="70" id="BcC-BU-lnm"/>
+                            <constraint firstItem="wam-1S-WRK" firstAttribute="leading" secondItem="eK4-0c-rKG" secondAttribute="leading" constant="70" id="F6G-gx-gAX"/>
+                            <constraint firstItem="rwa-Fn-SIA" firstAttribute="leading" secondItem="eK4-0c-rKG" secondAttribute="leading" constant="70" id="KYv-d3-Xmt"/>
+                            <constraint firstItem="eK4-0c-rKG" firstAttribute="bottom" secondItem="ahC-iT-ox3" secondAttribute="bottom" constant="20" id="XGY-IH-4Wv"/>
+                            <constraint firstItem="rwa-Fn-SIA" firstAttribute="centerY" secondItem="AOz-db-UdE" secondAttribute="centerY" id="bIy-o3-Jym"/>
+                            <constraint firstItem="eK4-0c-rKG" firstAttribute="trailing" secondItem="rwa-Fn-SIA" secondAttribute="trailing" constant="70" id="h08-UQ-yBK"/>
+                            <constraint firstItem="eK4-0c-rKG" firstAttribute="trailing" secondItem="ahC-iT-ox3" secondAttribute="trailing" constant="70" id="v0S-I7-4L0"/>
+                            <constraint firstItem="ahC-iT-ox3" firstAttribute="top" secondItem="wam-1S-WRK" secondAttribute="bottom" constant="30" id="wYS-tc-TmL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="eK4-0c-rKG"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Searching for a new chat" id="eFF-Tf-0WH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hfy-SU-K52" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3072.8000000000002" y="1704.6798029556651"/>
         </scene>
         <!--Select User Gender View Controller-->
         <scene sceneID="BUz-ws-dWK">
@@ -107,8 +401,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DSf-eA-ZZv" customClass="ChatButton" customModule="Chat" customModuleProvider="target">
-                                <rect key="frame" x="170.66666666666666" y="698" width="34" height="30"/>
-                                <state key="normal" title="Save">
+                                <rect key="frame" x="169.33333333333334" y="698" width="37" height="30"/>
+                                <state key="normal" title="SAVE">
                                     <color key="titleColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -174,7 +468,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QvF-4c-Q8I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1189.5999999999999" y="132.26600985221674"/>
+            <point key="canvasLocation" x="2279" y="132"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Npp-UH-UYe">
@@ -197,7 +491,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="66g-hD-7RP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-458" y="894"/>
+            <point key="canvasLocation" x="-374" y="910"/>
         </scene>
     </scenes>
     <resources>
