@@ -8,11 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		DA3B4A6722A7442C0025DC45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3B4A6622A7442C0025DC45 /* AppDelegate.swift */; };
-		DA3B4A6922A7442C0025DC45 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3B4A6822A7442C0025DC45 /* ViewController.swift */; };
+		DA3B4A6922A7442C0025DC45 /* IntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3B4A6822A7442C0025DC45 /* IntroductionViewController.swift */; };
 		DA3B4A6C22A7442C0025DC45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA3B4A6A22A7442C0025DC45 /* Main.storyboard */; };
 		DA3B4A6E22A7442C0025DC45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA3B4A6D22A7442C0025DC45 /* Assets.xcassets */; };
 		DA3B4A7122A7442C0025DC45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA3B4A6F22A7442C0025DC45 /* LaunchScreen.storyboard */; };
 		DA3B4A7C22A7442C0025DC45 /* ChatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3B4A7B22A7442C0025DC45 /* ChatTests.swift */; };
+		DA5D835622A84E1C007FC111 /* SelectUserGenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D835522A84E1C007FC111 /* SelectUserGenderViewController.swift */; };
+		DA5D835822A8512D007FC111 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D835722A8512D007FC111 /* ChatViewController.swift */; };
+		DA5D835B22A89D1E007FC111 /* ChatButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D835A22A89D1E007FC111 /* ChatButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +31,7 @@
 /* Begin PBXFileReference section */
 		DA3B4A6322A7442C0025DC45 /* Chat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA3B4A6622A7442C0025DC45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DA3B4A6822A7442C0025DC45 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DA3B4A6822A7442C0025DC45 /* IntroductionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionViewController.swift; sourceTree = "<group>"; };
 		DA3B4A6B22A7442C0025DC45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DA3B4A6D22A7442C0025DC45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA3B4A7022A7442C0025DC45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +39,9 @@
 		DA3B4A7722A7442C0025DC45 /* ChatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA3B4A7B22A7442C0025DC45 /* ChatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTests.swift; sourceTree = "<group>"; };
 		DA3B4A7D22A7442C0025DC45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA5D835522A84E1C007FC111 /* SelectUserGenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectUserGenderViewController.swift; sourceTree = "<group>"; };
+		DA5D835722A8512D007FC111 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		DA5D835A22A89D1E007FC111 /* ChatButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,12 +83,11 @@
 		DA3B4A6522A7442C0025DC45 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
-				DA3B4A6622A7442C0025DC45 /* AppDelegate.swift */,
-				DA3B4A6822A7442C0025DC45 /* ViewController.swift */,
+				DA5D835222A84066007FC111 /* Supporting Files */,
+				DA5D835922A878D9007FC111 /* Controllers */,
 				DA3B4A6A22A7442C0025DC45 /* Main.storyboard */,
-				DA3B4A6D22A7442C0025DC45 /* Assets.xcassets */,
-				DA3B4A6F22A7442C0025DC45 /* LaunchScreen.storyboard */,
 				DA3B4A7222A7442C0025DC45 /* Info.plist */,
+				DA5D835C22A89D29007FC111 /* Views */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -94,6 +99,34 @@
 				DA3B4A7D22A7442C0025DC45 /* Info.plist */,
 			);
 			path = ChatTests;
+			sourceTree = "<group>";
+		};
+		DA5D835222A84066007FC111 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DA3B4A6622A7442C0025DC45 /* AppDelegate.swift */,
+				DA3B4A6D22A7442C0025DC45 /* Assets.xcassets */,
+				DA3B4A6F22A7442C0025DC45 /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DA5D835922A878D9007FC111 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DA3B4A6822A7442C0025DC45 /* IntroductionViewController.swift */,
+				DA5D835522A84E1C007FC111 /* SelectUserGenderViewController.swift */,
+				DA5D835722A8512D007FC111 /* ChatViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		DA5D835C22A89D29007FC111 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DA5D835A22A89D1E007FC111 /* ChatButton.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,7 +232,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA3B4A6922A7442C0025DC45 /* ViewController.swift in Sources */,
+				DA3B4A6922A7442C0025DC45 /* IntroductionViewController.swift in Sources */,
+				DA5D835622A84E1C007FC111 /* SelectUserGenderViewController.swift in Sources */,
+				DA5D835822A8512D007FC111 /* ChatViewController.swift in Sources */,
+				DA5D835B22A89D1E007FC111 /* ChatButton.swift in Sources */,
 				DA3B4A6722A7442C0025DC45 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
