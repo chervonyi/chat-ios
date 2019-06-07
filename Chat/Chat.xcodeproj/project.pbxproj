@@ -10,6 +10,7 @@
 		DA1BFC1222A9B74D00AF5AA3 /* SelectDesirableGenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1BFC1122A9B74D00AF5AA3 /* SelectDesirableGenderViewController.swift */; };
 		DA1BFC1422A9C19B00AF5AA3 /* SelectDesirableLanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1BFC1322A9C19B00AF5AA3 /* SelectDesirableLanguageViewController.swift */; };
 		DA1BFC1622A9E56400AF5AA3 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1BFC1522A9E56400AF5AA3 /* SettingsViewController.swift */; };
+		DA29D12722AAE203003C1ABA /* ChatMessageBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA29D12622AAE203003C1ABA /* ChatMessageBlock.swift */; };
 		DA3B4A6722A7442C0025DC45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3B4A6622A7442C0025DC45 /* AppDelegate.swift */; };
 		DA3B4A6922A7442C0025DC45 /* IntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3B4A6822A7442C0025DC45 /* IntroductionViewController.swift */; };
 		DA3B4A6C22A7442C0025DC45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA3B4A6A22A7442C0025DC45 /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 		DA1BFC1122A9B74D00AF5AA3 /* SelectDesirableGenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectDesirableGenderViewController.swift; sourceTree = "<group>"; };
 		DA1BFC1322A9C19B00AF5AA3 /* SelectDesirableLanguageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectDesirableLanguageViewController.swift; sourceTree = "<group>"; };
 		DA1BFC1522A9E56400AF5AA3 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		DA29D12622AAE203003C1ABA /* ChatMessageBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageBlock.swift; sourceTree = "<group>"; };
 		DA3B4A6322A7442C0025DC45 /* Chat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA3B4A6622A7442C0025DC45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA3B4A6822A7442C0025DC45 /* IntroductionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionViewController.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				DA5D835A22A89D1E007FC111 /* ChatButton.swift */,
+				DA29D12622AAE203003C1ABA /* ChatMessageBlock.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 				DA5D835622A84E1C007FC111 /* SelectUserGenderViewController.swift in Sources */,
 				DA5D835822A8512D007FC111 /* ChatViewController.swift in Sources */,
 				DA5D835B22A89D1E007FC111 /* ChatButton.swift in Sources */,
+				DA29D12722AAE203003C1ABA /* ChatMessageBlock.swift in Sources */,
 				DA3B4A6722A7442C0025DC45 /* AppDelegate.swift in Sources */,
 				DA1BFC1422A9C19B00AF5AA3 /* SelectDesirableLanguageViewController.swift in Sources */,
 				DA1BFC1222A9B74D00AF5AA3 /* SelectDesirableGenderViewController.swift in Sources */,
