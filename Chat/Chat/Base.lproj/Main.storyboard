@@ -10,6 +10,11 @@
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue-Medium</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Input Name View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -106,6 +111,42 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ht4-Pc-3Pm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="478" y="910"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="LeU-0e-IgS">
+            <objects>
+                <viewController id="WSD-yg-OZk" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jDe-3U-1aF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Empty chat-list" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qC8-va-npn">
+                                <rect key="frame" x="128" y="365.66666666666669" width="119" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click on button at the header to search a new chat." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="86c-xs-S9X">
+                                <rect key="frame" x="0.0" y="406.66666666666669" width="375" height="15.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TGe-FI-xLI" firstAttribute="trailing" secondItem="86c-xs-S9X" secondAttribute="trailing" id="4py-u3-0Qv"/>
+                            <constraint firstItem="86c-xs-S9X" firstAttribute="leading" secondItem="TGe-FI-xLI" secondAttribute="leading" id="A2i-XU-jve"/>
+                            <constraint firstItem="86c-xs-S9X" firstAttribute="top" secondItem="qC8-va-npn" secondAttribute="bottom" constant="20" id="GdD-Sk-U6x"/>
+                            <constraint firstItem="qC8-va-npn" firstAttribute="centerY" secondItem="jDe-3U-1aF" secondAttribute="centerY" constant="-30" id="KiR-bz-Exl"/>
+                            <constraint firstItem="qC8-va-npn" firstAttribute="centerX" secondItem="jDe-3U-1aF" secondAttribute="centerX" id="WwV-Bd-Ww6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="TGe-FI-xLI"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Sn-Yk-8iU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1524" y="909.60591133004925"/>
         </scene>
         <!--Searching for a new chat-->
         <scene sceneID="sTy-rj-kKJ">
