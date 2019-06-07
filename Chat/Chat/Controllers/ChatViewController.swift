@@ -23,4 +23,7 @@ class ChatViewController: UIViewController {
         performSegue(withIdentifier: "toSearching", sender: nil)
     }
     
+    @IBAction func onClickSettings(_ sender: UIButton) {
+        performSegue(withIdentifier: "toSettings", sender: nil)
+    }
 }
