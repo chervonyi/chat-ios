@@ -1,4 +1,4 @@
-## Chat (iOS) [In development]
+## Chat (iOS) [Paused]
 
 **Description:** 
 >This ad-free application is a simple way to have a short talk with a random person or even find new friends. Just download this application to make sure about that. 
